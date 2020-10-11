@@ -3,4 +3,5 @@
 flutter App for converting currency rates
 
 
-![ScreenShot](https://raw.github.com/kirankarigoudar/lufickPracticalTest/master/screenshots/Screenshot_1.jpg =250*250)
+<img src="https://raw.github.com/kirankarigoudar/lufickPracticalTest/master/screenshots/Screenshot_1.jpg" width="300">
+
