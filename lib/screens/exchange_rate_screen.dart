@@ -99,13 +99,6 @@ class _ExchangeRateScreenState extends State<ExchangeRateScreen> {
         child: Column(
           children: <Widget>[
             TextField(
-              onChanged: (text) {
-                if (text.isEmpty) {
-                  setState(() {
-                    textValue = 1;
-                  });
-                }
-              },
               controller: _textController,
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
@@ -125,6 +118,19 @@ class _ExchangeRateScreenState extends State<ExchangeRateScreen> {
                       borderSide: BorderSide(color: Colors.white)),
                   focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.white))),
+              onChanged: (text) {
+                if (text.isEmpty) {
+                  setState(() {
+                    textValue = 1;
+                  });
+                }
+              },
+              textInputAction: TextInputAction.done,
+              onSubmitted: (value){
+                setState(() {
+                  textValue = double.parse(value);
+                });
+              },
             ),
             SizedBox(
               height: 5,
